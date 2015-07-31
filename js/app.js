@@ -10,7 +10,7 @@ tonyApp.controller('MoviesCtrl', ['$scope', '$http', function ($scope, $http) {
   $scope.movies = [];
   $http.get({
   	method: 'JSONP', 
-    url: 'http://www.myapifilms.com/imdb/top'})
+    url: 'http://jsonplaceholder.typicode.com/photos'})
     .then(function(response){
       $scope.movies = response.data.movies;
     });
