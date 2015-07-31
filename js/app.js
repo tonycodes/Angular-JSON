@@ -1,7 +1,5 @@
-var app = angular.module('tonyApp', [])
+var tonyApp = angular.module('tonyApp',[]);
 
-	app.controller('sayHello', ['', function(){
-		alert('hello');
-	}]);
-
-});
+tonyApp.controller('GreetingController', ['$scope', function($scope) {
+  $scope.greeting = 'Hola!';
+}]);
