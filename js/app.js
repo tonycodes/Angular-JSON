@@ -8,8 +8,9 @@ var tonyApp = angular.module('tonyApp',[]);
 
 tonyApp.controller('MoviesCtrl', ['$scope', '$http', function ($scope, $http) { 
   $scope.movies = [];
-  $http
-    .get("http://www.myapifilms.com/imdb/top")
+  $http.get({
+  	method: 'JSONP', 
+    url: 'http://www.myapifilms.com/imdb/top'})
     .then(function(response){
       $scope.movies = response.data.movies;
     });
