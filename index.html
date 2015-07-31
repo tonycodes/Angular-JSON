@@ -36,11 +36,15 @@
       </div>
     </nav>
 
-    <div class="container" ng-controller="GreetingController">
+    <div class="container" ng-controller="MoviesController">
 
       <div class="starter-template">
         <h1>Angular JSON</h1>
-        <p class="lead">{{ greeting }}</p>
+        <ul>
+        	<li ng-repeat="movie in movies">
+        		{{ movie.rating }}
+        	</li>
+        </ul>
       </div>
 
     </div><!-- /.container -->
