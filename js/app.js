@@ -14,5 +14,3 @@ tonyApp.controller('MoviesCtrl', ['$scope', '$http', function ($scope, $http) {
       $scope.movies = response.data.movies;
     });
 }]) 
-
-}]);
