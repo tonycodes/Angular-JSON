@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="tonyApp">
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,15 +36,15 @@
       </div>
     </nav>
 
-    <div class="container" ng-controller="MoviesCtrl">
+    <div class="container" ng-controller="customersCtrl">
 
       <div class="starter-template">
         <h1>..</h1>
-        <ul>
-        	<li ng-repeat="movie in movies">
-        		{{ movie[0].movie.title }}
-        	</li>
-        </ul>
+			<ul>
+			  <li ng-repeat="x in names">
+			    {{ x.Name + ', ' + x.Country }}
+			  </li>
+			</ul>
       </div>
 
     </div><!-- /.container -->
