@@ -36,17 +36,8 @@
       </div>
     </nav>
 
-    <div class="container" ng-controller="customersCtrl">
-
-      <div class="starter-template">
-        <h1>..</h1>
-			<ul>
-			  <li ng-repeat="x in names">
-			    {{ x.Name + ', ' + x.Country }}
-			  </li>
-			</ul>
-      </div>
-
+    <div class="container" ng-controller="MeController">
+      {{ me.firstName }}
     </div><!-- /.container -->
 
   </body>
