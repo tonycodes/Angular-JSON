@@ -36,8 +36,8 @@
       </div>
     </nav>
 
-    <div class="container" ng-controller="MeController">
-      {{ firstName }}
+    <div class="container" ng-controller="MeController as me">
+      <p>{{ me.me.firstName }}</p>
     </div><!-- /.container -->
 
   </body>
