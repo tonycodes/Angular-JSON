@@ -6,4 +6,9 @@ app.controller('LinkedInController', function($scope, $http) {
 app.controller('me', function($scope, $http) {
   $scope.firstName = 'Tony';
   $scope.lastName = 'James';
+  $scope.me =
+  {
+    "firstName": "Tony",
+    "lastName": "James"
+  }
 });
