@@ -36,11 +36,13 @@
       </div>
     </nav>
 
-    <div class="container" ng-controller="home">
-		<p>
-			This is a demo site for Angular JS by {{ movie }}. The idea is that i can set personal information in a JSON file and 			pass it to the view for use in a personal profile page. Just writing a load of gibberish.
-		</p>
-    </div><!-- /.container -->
+<div ng-controller="MyController">
+  Your name:
+    <input type="text" ng-model="username">
+    <button ng-click='sayHello()'>greet</button>
+  <hr>
+  {{greeting}}
+</div>
 
   </body>
 </html>
