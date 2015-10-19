@@ -22,6 +22,12 @@
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/modernizr-min.js"></script>
+    <script>
+      if (!Modernizr.input.placeholder){
+        $('input[placeholder], textarea[placeholder]').placeholder();
+      }
+    </script>
     <script src="js/jquery.placeholder.js"></script>
     <script> if (!Modernizr.input.placeholder){ $('input[placeholder], textarea[placeholder]').placeholder(); } </script>
     <script src="js/jquery.form.js"></script>
@@ -87,12 +93,7 @@
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <script src="js/modernizr-min.js"></script>
-    <script>
-      if (!Modernizr.input.placeholder){
-        $('input[placeholder], textarea[placeholder]').placeholder();
-      }
-    </script>
+
 
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
