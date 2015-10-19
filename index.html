@@ -21,6 +21,12 @@
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
+    <script src="js/jquery.placeholder.js"></script>
+    <script> if (!Modernizr.input.placeholder){ $('input[placeholder], textarea[placeholder]').placeholder(); } </script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script> $(function(){ $('#contact').validate({ submitHandler: function(form) { $(form).ajaxSubmit({ url: 'process.php', success: function() { $('#contact').hide(); $('#contact-form').append("<p class='thanks'>Thanks! Your request has been sent.</p>") } }); } }); });
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -56,6 +62,23 @@
       <div class="starter-template">
         <h1>Tony James Software Developer</h1>
         <p class="lead">A driven software engineer with a passion for new technology. This website is currently being revamped, in the meantime feel free to email me.</p>
+        <div id="contact-form">
+          <form id="contact" method="post" action="">
+            <fieldset>
+              <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Full Name" title="Enter your name" class="required">
+              <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="yourname@domain.com" title="Enter your e-mail address" class="required email">
+              <label for="phone">Phone</label>
+                <input type="text" name="phone">
+              <label for="website">Website</label>
+                <input type="url" name="url" placeholder="http://">
+              <label for="message">Question/Comment</label>
+                <textarea name="message"></textarea>
+                <input type="submit" name="submit" id="submit" value="Send Message" />
+              </fieldset>
+            </form>
+          </div><!-- /end #contact-form -->
       </div>
 
     </div><!-- /.container -->
@@ -63,6 +86,12 @@
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
+    <script src="js/modernizr-min.js"></script>
+    <script>
+      if (!Modernizr.input.placeholder){
+        $('input[placeholder], textarea[placeholder]').placeholder();
+      }
+    </script>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
